@@ -1,1 +1,1 @@
-[{"title":"Hello World","date":"2017.08.26","uri":"2017/08/26/hello-world/","excerpt":""}]
+[{"title":"Hello World","date":"2017.08.26","uri":"2017/08/26/hello-world/","excerpt":""},{"title":"使用github+hexo搭建免费个人博客","date":"2017.09.03","uri":"2017/09/03/使用github-hexo搭建免费个人博客/","excerpt":""}]

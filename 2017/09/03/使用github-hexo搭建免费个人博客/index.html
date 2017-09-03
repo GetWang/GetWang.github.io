@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>使用github+hexo搭建免费个人博客 | GetWang&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="注：本文搭建的是静态博客，且托管于github 一、准备工作 拥有一个github账号，没有就注册一个 安装Node.js、npm，npm的用处看这里，其实npm已经内置在了Node.js中，只需安装Node.js即可 安装git客户端  ps：查看Node.js、npm、git版本。打开Git Bash，$ node -v，$ npm -v，$ git --version这三条命令可查看相应的版">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用github+hexo搭建免费个人博客">
+<meta property="og:url" content="http://yoursite.com/2017/09/03/使用github-hexo搭建免费个人博客/index.html">
+<meta property="og:site_name" content="GetWang&#39;s Blog">
+<meta property="og:description" content="注：本文搭建的是静态博客，且托管于github 一、准备工作 拥有一个github账号，没有就注册一个 安装Node.js、npm，npm的用处看这里，其实npm已经内置在了Node.js中，只需安装Node.js即可 安装git客户端  ps：查看Node.js、npm、git版本。打开Git Bash，$ node -v，$ npm -v，$ git --version这三条命令可查看相应的版">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-09-03T12:04:57.028Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用github+hexo搭建免费个人博客">
+<meta name="twitter:description" content="注：本文搭建的是静态博客，且托管于github 一、准备工作 拥有一个github账号，没有就注册一个 安装Node.js、npm，npm的用处看这里，其实npm已经内置在了Node.js中，只需安装Node.js即可 安装git客户端  ps：查看Node.js、npm、git版本。打开Git Bash，$ node -v，$ npm -v，$ git --version这三条命令可查看相应的版">
+  
+    <link rel="alternate" href="/atom.xml" title="GetWang&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/categories">分类</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">GetWang&#39;s Blog</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-使用github-hexo搭建免费个人博客" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/03/使用github-hexo搭建免费个人博客/" class="article-date">
+  <time datetime="2017-09-03T09:32:18.000Z" itemprop="datePublished">2017-09-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      使用github+hexo搭建免费个人博客
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p><strong>注：</strong>本文搭建的是静态博客，且托管于github</p>
+<h2 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h2><ul>
+<li>拥有一个github账号，没有就<a href="https://github.com/" target="_blank" rel="external">注册</a>一个</li>
+<li>安装<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a>、<a href="https://www.npmjs.com/enterprise" target="_blank" rel="external">npm</a>，npm的用处看<a href="https://zhuanlan.zhihu.com/p/24357770" target="_blank" rel="external">这里</a>，其实npm已经内置在了Node.js中，只需安装Node.js即可</li>
+<li>安装<a href="https://git-scm.com/" target="_blank" rel="external">git</a>客户端</li>
+</ul>
+<p><strong>ps：</strong>查看Node.js、npm、git版本。打开Git Bash，<code>$ node -v</code>，<code>$ npm -v</code>，<code>$ git --version</code>这三条命令可查看相应的版本</p>
+<hr>
+<a id="more"></a>
+<h2 id="二、创建仓库"><a href="#二、创建仓库" class="headerlink" title="二、创建仓库"></a>二、创建仓库</h2><p>新建一个名为<strong>username.github.io</strong>的仓库，<strong>username</strong>是你现今的用户名，以后绑定或不绑定域名，都可通过<strong>username.github.io</strong>来访问博客</p>
+<hr>
+<h2 id="三、配置SSH-Key"><a href="#三、配置SSH-Key" class="headerlink" title="三、配置SSH Key"></a>三、配置SSH Key</h2><h4 id="Why："><a href="#Why：" class="headerlink" title="Why："></a>Why：</h4><p>我们在本地写博客、编写代码，最终要提交到服务器上去，怎样建立一种本地与服务器的连接呢？可以使用github用户名和密码，但这有些繁琐且不安全，所以用到SSH Key来建立加密连接。</p>
+<h4 id="How："><a href="#How：" class="headerlink" title="How："></a>How：</h4><ol>
+<li><p>首先检查本机有没有SSH Key，<code>$ cd ~/.ssh</code>，若提示：No such file or directory ，则说明你是第一次使用git；</p>
+</li>
+<li><p><code>$ ssh-keygen -t rsa -C &quot;邮件地址&quot;</code>，然后连续回车3次来生成SSH Key，生成的文件在用户目录下（用户目录在git窗口中有提示），找到<strong>.ssh\id_rsa.pub</strong>文件后，用记事本打开并复制里面的所有内容，接着打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key，粘贴到Key内容框中，Title框中可写明该SSH Key的用处，保存即可；（邮件地址为你的github邮箱）</p>
+</li>
+<li><p><code>$ ssh -T git@github.com</code>，回车，出现”Are you sure you want to continue connecting (yes/no)?”后，输入<strong>yes</strong>，当你看到”Hi ‘username’! You’ve successfully authenticated, but GitHub does not provide shell access.”时，说明你的SSH已经配置成功；（username为你的用户名）</p>
+</li>
+<li><p><code>$ git config --global user.name &quot;你的username&quot;</code>，<code>$ git config --global user.email &quot;你的github邮箱&quot;</code>进行配置。</p>
+</li>
+</ol>
+<hr>
+<h2 id="四、使用hexo写博客"><a href="#四、使用hexo写博客" class="headerlink" title="四、使用hexo写博客"></a>四、使用hexo写博客</h2><ol>
+<li><p>hexo是一种创建静态博客的框架，下载及学习文档请访问<a href="https://hexo.io/zh-cn/" target="_blank" rel="external">官网</a></p>
+</li>
+<li><p>在本机创建一个文件夹作为个人博客的根目录，以后所有的文件都放在该文件夹下，包括hexo框架。使用npm下载hexo时，先cd到该文件夹下，<code>$ npm install hexo-cli -g</code>进行下载安装</p>
+</li>
+<li><p><code>$ hexo -v</code>以查看hexo的版本，<code>$ hexo init</code>进行初始化</p>
+</li>
+<li><p><code>$ hexo clean</code>可简写为<code>$ hexo c</code><br>  清除缓存文件 (db.json) 和已生成的静态文件 (public)。<br>  在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
+</li>
+<li><p><code>$ hexo generate</code>可简写为<code>$ hexo g</code><br>  生成静态文件。</p>
+</li>
+<li><p><code>$ hexo server</code>可简写为<code>$ hexo s</code><br>  启动本地预览服务器。默认情况下，访问网址为<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a></p>
+</li>
+<li><p><code>$ hexo deploy</code>可简写为<code>$ hexo d</code><br>  部署网站。<br>  <strong>注意：</strong>部署网站即将代码上传到github上之前，须确保         _config.yml配置文件中有关deploy的配置正确：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">   type: git</div><div class="line">   repository: https://github.com/username/username.github.io.git</div><div class="line">   branch: master</div></pre></td></tr></table></figure>
+<p> （username是你的用户名）；<br>  且还需要下载一个插件，<code>$ npm install hexo-deployer-git --save</code></p>
+</li>
+<li><p>更换主题，eg：先<code>$ git clone https://github.com/giscafer/hexo-theme-cafe.git themes/cafe</code>，然后将_config.yml配置文件的<code>theme: landscape</code>改为<code>theme: cafe</code>。所有的主题都将保存在themes文件夹下。请看<a href="https://hexo.io/themes/" target="_blank" rel="external">官方主题</a></p>
+</li>
+<li><p><code>$ hexo new &quot;postname&quot;</code>，新建文章，postname为文章的名称。所有的文章都将保存在source文件夹下的_posts中。文章是以.md文件形式保存，在.md文件的顶部设置<code>categories</code>和<code>tags</code>字段可将文章分类、添加标签，不过这些都是可选的。</p>
+</li>
+<li><p><code>$ hexo new page &quot;pagename&quot;</code>，新建页面，pagename为页面的名称。新建页面将保存在source文件夹下。</p>
+</li>
+<li><p>组合命令：<br>   <code>$ hexo s -g</code>，生成静态页面并预览<br>   <code>$ hexo d -g</code>，生成静态页面并上传</p>
+</li>
+<li><p>如何让博文不全部显示（默认全部显示），而是显示博文的摘要呢？解决方法是在博文适当的位置加上<code>&lt;!--more--&gt;</code></p>
+</li>
+<li><p>创建的个人博客有两种配置文件，一种是根目录下的_config.yml，还有就是每个主题中的_config.yml。有关命令和配置详情请参见<a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">官方文档</a></p>
+</li>
+</ol>
+<hr>
+<h2 id="五、最终效果"><a href="#五、最终效果" class="headerlink" title="五、最终效果"></a>五、最终效果</h2><p>可以参见我的个人博客 <a href="https://GetWang.github.io/" target="_blank" rel="external">https://GetWang.github.io/</a><br>我用的是<a href="https://github.com/giscafer/hexo-theme-cafe" target="_blank" rel="external">cafe主题</a></p>
+<hr>
+<h2 id="六、参考"><a href="#六、参考" class="headerlink" title="六、参考"></a>六、参考</h2><ul>
+<li><a href="http://www.cnblogs.com/zhcncn/p/4097881.html" target="_blank" rel="external">http://www.cnblogs.com/zhcncn/p/4097881.html</a></li>
+<li><a href="http://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html" target="_blank" rel="external">http://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html</a></li>
+<li><a href="http://www.jianshu.com/p/05289a4bc8b2" target="_blank" rel="external">http://www.jianshu.com/p/05289a4bc8b2</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/09/03/使用github-hexo搭建免费个人博客/" data-id="cj74rvej20002kgnw61hsimbd" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+ <script src="/jquery/jquery.min.js"></script>
+  <div id="random_posts">
+    <h2>推荐文章</h2>
+    <div class="random_posts_ul">
+      <script>
+          var random_count =4
+          var site = {BASE_URI:'/'};
+          function load_random_posts(obj) {
+              var arr=site.posts;
+              if (!obj) return;
+              // var count = $(obj).attr('data-count') || 6;
+              for (var i, tmp, n = arr.length; n; i = Math.floor(Math.random() * n), tmp = arr[--n], arr[n] = arr[i], arr[i] = tmp);
+              arr = arr.slice(0, random_count);
+              var html = '<ul>';
+            
+              for(var j=0;j<arr.length;j++){
+                var item=arr[j];
+                html += '<li><strong>' + 
+                item.date + ':&nbsp;&nbsp;<a href="' + (site.BASE_URI+item.uri) + '">' + 
+                (item.title || item.uri) + '</a></strong>';
+                if(item.excerpt){
+                  html +='<div class="post-excerpt">'+item.excerpt+'</div>';
+                }
+                html +='</li>';
+                
+              }
+              $(obj).html(html + '</ul>');
+          }
+          $('.random_posts_ul').each(function () {
+              var c = this;
+              if (!site.posts || !site.posts.length){
+                  $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+              } 
+               else{
+                load_random_posts(c);
+              }
+          });
+      </script>
+    </div>
+  </div>
+
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/08/26/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+       
+      
+      
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+    <div class="widget-wrap">
+    
+      <div class="widget" id="toc-widget-fixed">
+      
+        <strong class="toc-title">文章目录</strong>
+        <div class="toc-widget-list">
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、准备工作"><span class="toc-number">1.</span> <span class="toc-text">一、准备工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、创建仓库"><span class="toc-number">2.</span> <span class="toc-text">二、创建仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、配置SSH-Key"><span class="toc-number">3.</span> <span class="toc-text">三、配置SSH Key</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Why："><span class="toc-number">3.0.1.</span> <span class="toc-text">Why：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#How："><span class="toc-number">3.0.2.</span> <span class="toc-text">How：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、使用hexo写博客"><span class="toc-number">4.</span> <span class="toc-text">四、使用hexo写博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、最终效果"><span class="toc-number">5.</span> <span class="toc-text">五、最终效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、参考"><span class="toc-number">6.</span> <span class="toc-text">六、参考</span></a></li></ol>
+          </div>
+      </div>
+    </div>
+
+  
+    
+
+  
+    
+  
+    
+  
+    
+
+  
+    
+  
+    <!--微信公众号二维码-->
+
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2017 GetWang&nbsp;|&nbsp;
+      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      联系方式&nbsp;|&nbsp;2712738192@qq.com
+    </div>
+  </div>
+</footer>
+ <script src="/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/categories" class="mobile-nav-link">分类</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842688ce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
+
+
+
+
+
+
+
+<!-- author:forvoid begin -->
+<!-- author:forvoid begin -->
+
+<!-- author:forvoid end -->
+
+<!-- author:forvoid end -->
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/mathjax/MathJax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ <script src="/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/elevator.js"></script>
+  </div>
+</body>
+</html>
