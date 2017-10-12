@@ -69,18 +69,18 @@
 
 
 
-<meta name="description" content="问题在IE6、IE7中，display: inline-block只有设置在默认显示方式为inline的元素上才会生效 方法一 先使用display: inline-block触发块级元素； 然后使用display: inline让元素呈递为内联对象。注意：须将这两个样式放在不同的CSS声明中，eg：123456ul li &amp;#123;	display: inline-block;&amp;#125;ul">
+<meta name="description" content="问题在IE6、IE7中，display: inline-block只有设置在默认显示方式为inline的元素上才会生效 方法一 先使用display: inline-block触发块级元素； 然后使用display: inline让元素呈递为内联对象。注意：须将这两个样式放在不同的CSS声明中，eg：123456ul li &amp;#123;    display: inline-block;&amp;#125">
 <meta name="keywords" content="技巧">
 <meta property="og:type" content="article">
 <meta property="og:title" content="实现浏览器兼容版的inline-block显示">
 <meta property="og:url" content="http://yoursite.com/2017/09/24/实现浏览器兼容版的inline-block显示/index.html">
 <meta property="og:site_name" content="GetWang&#39;s Blog">
-<meta property="og:description" content="问题在IE6、IE7中，display: inline-block只有设置在默认显示方式为inline的元素上才会生效 方法一 先使用display: inline-block触发块级元素； 然后使用display: inline让元素呈递为内联对象。注意：须将这两个样式放在不同的CSS声明中，eg：123456ul li &amp;#123;	display: inline-block;&amp;#125;ul">
+<meta property="og:description" content="问题在IE6、IE7中，display: inline-block只有设置在默认显示方式为inline的元素上才会生效 方法一 先使用display: inline-block触发块级元素； 然后使用display: inline让元素呈递为内联对象。注意：须将这两个样式放在不同的CSS声明中，eg：123456ul li &amp;#123;    display: inline-block;&amp;#125">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-24T12:11:05.104Z">
+<meta property="og:updated_time" content="2017-10-12T12:41:30.585Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="实现浏览器兼容版的inline-block显示">
-<meta name="twitter:description" content="问题在IE6、IE7中，display: inline-block只有设置在默认显示方式为inline的元素上才会生效 方法一 先使用display: inline-block触发块级元素； 然后使用display: inline让元素呈递为内联对象。注意：须将这两个样式放在不同的CSS声明中，eg：123456ul li &amp;#123;	display: inline-block;&amp;#125;ul">
+<meta name="twitter:description" content="问题在IE6、IE7中，display: inline-block只有设置在默认显示方式为inline的元素上才会生效 方法一 先使用display: inline-block触发块级元素； 然后使用display: inline让元素呈递为内联对象。注意：须将这两个样式放在不同的CSS声明中，eg：123456ul li &amp;#123;    display: inline-block;&amp;#125">
 
 
 
@@ -345,13 +345,13 @@
         <h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>在IE6、IE7中，<code>display: inline-block</code>只有设置在默认显示方式为inline的元素上才会生效</p>
 <h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><ol>
 <li>先使用<code>display: inline-block</code>触发块级元素；</li>
-<li>然后使用<code>display: inline</code>让元素呈递为内联对象。<br><strong>注意：</strong>须将这两个样式放在不同的CSS声明中，eg：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">ul li &#123;</div><div class="line">	display: inline-block;</div><div class="line">&#125;</div><div class="line">ul li &#123;</div><div class="line">	*display: inline;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li>然后使用<code>display: inline</code>让元素呈递为内联对象。<br><strong>注意：</strong>须将这两个样式放在不同的CSS声明中，eg：<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span> &#123;</div><div class="line">    <span class="attribute">display</span>: inline-block;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span> &#123;</div><div class="line">    *display: inline;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ol>
 <a id="more"></a>
 <h4 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h4><ol>
 <li>先使用<code>display: inline-block</code>和<code>*display: inline</code>让块级元素变为内联；</li>
-<li>再使用<code>*zoom: 1</code>或float属性等触发块级元素layout。<br>eg:<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">ul li &#123;</div><div class="line">	display: inline-block;</div><div class="line">	*display: inline;</div><div class="line">	*zoom: 1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li>再使用<code>*zoom: 1</code>或float属性等触发块级元素layout。<br>eg:<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span> &#123;</div><div class="line">    <span class="attribute">display</span>: inline-block;</div><div class="line">    *display: inline;</div><div class="line">    *<span class="selector-tag">zoom</span>: 1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ol>
 

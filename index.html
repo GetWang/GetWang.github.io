@@ -347,7 +347,7 @@
           <h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>在IE6、IE7中，<code>display: inline-block</code>只有设置在默认显示方式为inline的元素上才会生效</p>
 <h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><ol>
 <li>先使用<code>display: inline-block</code>触发块级元素；</li>
-<li>然后使用<code>display: inline</code>让元素呈递为内联对象。<br><strong>注意：</strong>须将这两个样式放在不同的CSS声明中，eg：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">ul li &#123;</div><div class="line">	display: inline-block;</div><div class="line">&#125;</div><div class="line">ul li &#123;</div><div class="line">	*display: inline;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li>然后使用<code>display: inline</code>让元素呈递为内联对象。<br><strong>注意：</strong>须将这两个样式放在不同的CSS声明中，eg：<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span> &#123;</div><div class="line">    <span class="attribute">display</span>: inline-block;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span> &#123;</div><div class="line">    *display: inline;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ol>
           <!--noindex-->
