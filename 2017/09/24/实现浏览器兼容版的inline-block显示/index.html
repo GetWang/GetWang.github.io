@@ -84,7 +84,7 @@
 <meta property="og:site_name" content="GetWang&#39;s Blog">
 <meta property="og:description" content="问题在IE6、IE7中，display: inline-block只有设置在默认显示方式为inline的元素上才会生效 方法一 先使用display: inline-block触发块级元素； 然后使用display: inline让元素呈递为内联对象。注意：须将这两个样式放在不同的CSS声明中，eg：123456ul li &amp;#123;    display: inline-block;&amp;#125">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-12T12:41:30.585Z">
+<meta property="og:updated_time" content="2017-10-21T09:24:12.226Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="实现浏览器兼容版的inline-block显示">
 <meta name="twitter:description" content="问题在IE6、IE7中，display: inline-block只有设置在默认显示方式为inline的元素上才会生效 方法一 先使用display: inline-block触发块级元素； 然后使用display: inline让元素呈递为内联对象。注意：须将这两个样式放在不同的CSS声明中，eg：123456ul li &amp;#123;    display: inline-block;&amp;#125">
@@ -355,6 +355,7 @@
 <li>然后使用<code>display: inline</code>让元素呈递为内联对象。<br><strong>注意：</strong>须将这两个样式放在不同的CSS声明中，eg：<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span> &#123;</div><div class="line">    <span class="attribute">display</span>: inline-block;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span> &#123;</div><div class="line">    *display: inline;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ol>
+<hr>
 <a id="more"></a>
 <h4 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h4><ol>
 <li>先使用<code>display: inline-block</code>和<code>*display: inline</code>让块级元素变为内联；</li>
@@ -400,6 +401,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/10/21/正则表达式元字符/" rel="prev" title="正则表达式元字符">
+                正则表达式元字符 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -479,7 +484,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -490,7 +495,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -501,7 +506,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

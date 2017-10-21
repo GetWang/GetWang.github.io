@@ -60,7 +60,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hexo," />
+  <meta name="keywords" content="正则表达式," />
 
 
 
@@ -76,18 +76,18 @@
 
 
 
-<meta name="description" content="注：本文搭建的是静态博客，且托管于github 准备工作 拥有一个github账号，没有就注册一个 安装Node.js、npm，npm的用处看这里，其实npm已经内置在了Node.js中，只需安装Node.js即可 安装git客户端  ps：查看Node.js、npm、git版本。打开Git Bash，$ node -v，$ npm -v，$ git --version这三条命令可查看相应的版本">
-<meta name="keywords" content="hexo">
+<meta name="description" content="基本的元字符   元字符 说明     . 匹配任意单个字符（换行符除外）   [] 匹配字符集中的一个字符   [^] 对字符集合求非   - 定义一个区间（例如[0-9]）   \ 对一个字符转义    另： 元字符|表示逻辑或操作">
+<meta name="keywords" content="正则表达式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用github+hexo搭建免费个人博客">
-<meta property="og:url" content="http://yoursite.com/2017/09/03/使用github-hexo搭建免费个人博客/index.html">
+<meta property="og:title" content="正则表达式元字符">
+<meta property="og:url" content="http://yoursite.com/2017/10/21/正则表达式元字符/index.html">
 <meta property="og:site_name" content="GetWang&#39;s Blog">
-<meta property="og:description" content="注：本文搭建的是静态博客，且托管于github 准备工作 拥有一个github账号，没有就注册一个 安装Node.js、npm，npm的用处看这里，其实npm已经内置在了Node.js中，只需安装Node.js即可 安装git客户端  ps：查看Node.js、npm、git版本。打开Git Bash，$ node -v，$ npm -v，$ git --version这三条命令可查看相应的版本">
+<meta property="og:description" content="基本的元字符   元字符 说明     . 匹配任意单个字符（换行符除外）   [] 匹配字符集中的一个字符   [^] 对字符集合求非   - 定义一个区间（例如[0-9]）   \ 对一个字符转义    另： 元字符|表示逻辑或操作">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-24T06:54:15.044Z">
+<meta property="og:updated_time" content="2017-10-21T13:25:17.615Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用github+hexo搭建免费个人博客">
-<meta name="twitter:description" content="注：本文搭建的是静态博客，且托管于github 准备工作 拥有一个github账号，没有就注册一个 安装Node.js、npm，npm的用处看这里，其实npm已经内置在了Node.js中，只需安装Node.js即可 安装git客户端  ps：查看Node.js、npm、git版本。打开Git Bash，$ node -v，$ npm -v，$ git --version这三条命令可查看相应的版本">
+<meta name="twitter:title" content="正则表达式元字符">
+<meta name="twitter:description" content="基本的元字符   元字符 说明     . 匹配任意单个字符（换行符除外）   [] 匹配字符集中的一个字符   [^] 对字符集合求非   - 定义一个区间（例如[0-9]）   \ 对一个字符转义    另： 元字符|表示逻辑或操作">
 
 
 
@@ -117,13 +117,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/03/使用github-hexo搭建免费个人博客/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/21/正则表达式元字符/"/>
 
 
 
 
 
-  <title>使用github+hexo搭建免费个人博客 | GetWang's Blog</title>
+  <title>正则表达式元字符 | GetWang's Blog</title>
   
 
 
@@ -260,7 +260,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/03/使用github-hexo搭建免费个人博客/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/21/正则表达式元字符/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="GetWang">
@@ -277,7 +277,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">使用github+hexo搭建免费个人博客</h1>
+          <h1 class="post-title" itemprop="name headline">正则表达式元字符</h1>
         
 
         <div class="post-meta">
@@ -289,8 +289,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-03T17:32:18+08:00">
-                2017-09-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-21T16:15:57+08:00">
+                2017-10-21
               </time>
             
 
@@ -312,8 +312,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo</span>
+                  <a href="/categories/正则表达式/" itemprop="url" rel="index">
+                    <span itemprop="name">正则表达式</span>
                   </a>
                 </span>
 
@@ -349,66 +349,231 @@
       
 
       
-        <p><strong>注：</strong>本文搭建的是静态博客，且托管于github</p>
-<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
-<li>拥有一个github账号，没有就<a href="https://github.com/" target="_blank" rel="external">注册</a>一个</li>
-<li>安装<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a>、<a href="https://www.npmjs.com/enterprise" target="_blank" rel="external">npm</a>，npm的用处看<a href="https://zhuanlan.zhihu.com/p/24357770" target="_blank" rel="external">这里</a>，其实npm已经内置在了Node.js中，只需安装Node.js即可</li>
-<li>安装<a href="https://git-scm.com/" target="_blank" rel="external">git</a>客户端</li>
-</ul>
-<p><strong>ps：</strong>查看Node.js、npm、git版本。打开Git Bash，<code>$ node -v</code>，<code>$ npm -v</code>，<code>$ git --version</code>这三条命令可查看相应的版本</p>
+        <h2 id="基本的元字符"><a href="#基本的元字符" class="headerlink" title="基本的元字符"></a>基本的元字符</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">元字符</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>.</code></td>
+<td style="text-align:center">匹配任意单个字符（换行符除外）</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>[]</code></td>
+<td style="text-align:center">匹配字符集中的一个字符</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>[^]</code></td>
+<td style="text-align:center">对字符集合求非</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>-</code></td>
+<td style="text-align:center">定义一个区间（例如[0-9]）</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\</code></td>
+<td style="text-align:center">对一个字符转义</td>
+</tr>
+</tbody>
+</table>
+<p><strong>另：</strong> 元字符<code>|</code>表示逻辑或操作</p>
 <hr>
 <a id="more"></a>
-<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>新建一个名为<strong>username.github.io</strong>的仓库，<strong>username</strong>是你现今的用户名，以后绑定或不绑定域名，都可通过<strong>username.github.io</strong>来访问博客</p>
+<h2 id="数量元字符"><a href="#数量元字符" class="headerlink" title="数量元字符"></a>数量元字符</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">元字符</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>*</code></td>
+<td style="text-align:center">匹配前一个字符（捕获组）的零次或多次重复，等价于<code>{0,}</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>*?</code></td>
+<td style="text-align:center"><code>*</code>的懒惰型版本</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>+</code></td>
+<td style="text-align:center">匹配前一个字符（捕获组）的一次或多次重复，等价于<code>{1,}</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>+?</code></td>
+<td style="text-align:center"><code>+</code>的懒惰型版本</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>?</code></td>
+<td style="text-align:center">匹配前一个字符（捕获组）的零次或一次重复，等价于<code>{0,1}</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>{n}</code></td>
+<td style="text-align:center">匹配前一个字符（捕获组）的n次重复</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>{m,n}</code></td>
+<td style="text-align:center">匹配前一个字符（捕获组）至少m次且至多n次重复</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>{n,}</code></td>
+<td style="text-align:center">匹配前一个字符（捕获组）的n次或多次重复</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>{n,}?</code></td>
+<td style="text-align:center"><code>{n,}</code>的懒惰型版本</td>
+</tr>
+</tbody>
+</table>
 <hr>
-<h2 id="配置SSH-Key"><a href="#配置SSH-Key" class="headerlink" title="配置SSH Key"></a>配置SSH Key</h2><h4 id="Why："><a href="#Why：" class="headerlink" title="Why："></a>Why：</h4><p>我们在本地写博客、编写代码，最终要提交到服务器上去，怎样建立一种本地与服务器的连接呢？可以使用github用户名和密码，但这有些繁琐且不安全，所以用到SSH Key来建立加密连接。</p>
-<h4 id="How："><a href="#How：" class="headerlink" title="How："></a>How：</h4><ol>
-<li><p>首先检查本机有没有SSH Key，<code>$ cd ~/.ssh</code>，若提示：No such file or directory ，则说明你是第一次使用git；</p>
-</li>
-<li><p><code>$ ssh-keygen -t rsa -C &quot;邮件地址&quot;</code>，然后连续回车3次来生成SSH Key，生成的文件在用户目录下（用户目录在git窗口中有提示），找到<strong>.ssh\id_rsa.pub</strong>文件后，用记事本打开并复制里面的所有内容，接着打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key，粘贴到Key内容框中，Title框中可写明该SSH Key的用处，保存即可；（邮件地址为你的github邮箱）</p>
-</li>
-<li><p><code>$ ssh -T git@github.com</code>，回车，出现”Are you sure you want to continue connecting (yes/no)?”后，输入<strong>yes</strong>，当你看到”Hi ‘username’! You’ve successfully authenticated, but GitHub does not provide shell access.”时，说明你的SSH已经配置成功；（username为你的用户名）</p>
-</li>
-<li><p><code>$ git config --global user.name &quot;你的username&quot;</code>，<code>$ git config --global user.email &quot;你的github邮箱&quot;</code>进行配置。</p>
-</li>
-</ol>
+<h2 id="位置元字符"><a href="#位置元字符" class="headerlink" title="位置元字符"></a>位置元字符</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">元字符</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>^</code></td>
+<td style="text-align:center">匹配字符串的开头</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>$</code></td>
+<td style="text-align:center">匹配字符串的结束</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\b</code></td>
+<td style="text-align:center">匹配单词边界（开头和结束）</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\B</code></td>
+<td style="text-align:center">\b的反义</td>
+</tr>
+</tbody>
+</table>
 <hr>
-<h2 id="使用hexo写博客"><a href="#使用hexo写博客" class="headerlink" title="使用hexo写博客"></a>使用hexo写博客</h2><ol>
-<li><p>hexo是一种创建静态博客的框架，下载及学习文档请访问<a href="https://hexo.io/zh-cn/" target="_blank" rel="external">官网</a></p>
-</li>
-<li><p>在本机创建一个文件夹作为个人博客的根目录，以后所有的文件都放在该文件夹下，包括hexo框架。使用npm下载hexo时，先cd到该文件夹下，<code>$ npm install hexo-cli -g</code>进行下载安装</p>
-</li>
-<li><p><code>$ hexo -v</code>以查看hexo的版本，<code>$ hexo init</code>进行初始化</p>
-</li>
-<li><p><code>$ hexo clean</code>可简写为<code>$ hexo c</code><br>  清除缓存文件 (db.json) 和已生成的静态文件 (public)。<br>  在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
-</li>
-<li><p><code>$ hexo generate</code>可简写为<code>$ hexo g</code><br>  生成静态文件。</p>
-</li>
-<li><p><code>$ hexo server</code>可简写为<code>$ hexo s</code><br>  启动本地预览服务器。默认情况下，访问网址为<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a></p>
-</li>
-<li><p><code>$ hexo deploy</code>可简写为<code>$ hexo d</code><br>  部署网站。<br>  <strong>注意：</strong>部署网站即将代码上传到github上之前，须确保_config.yml配置文件中有关deploy的配置正确：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">   type: git</div><div class="line">   repository: https://github.com/username/username.github.io.git</div><div class="line">   branch: master</div></pre></td></tr></table></figure>
-<p> （username是你的用户名）；<br>  且还需要下载一个插件，<code>$ npm install hexo-deployer-git --save</code>     </p>
-</li>
-<li><p>更换主题，eg：先<code>$ git clone https://github.com/iissnan/hexo-theme-next themes/next</code>，然后将_config.yml配置文件的<code>theme: landscape</code>改为<code>theme: next</code>。所有的主题都将保存在themes文件夹下。请看<a href="https://hexo.io/themes/" target="_blank" rel="external">官方主题</a></p>
-</li>
-<li><p><code>$ hexo new &quot;postname&quot;</code>，新建文章，postname为文章的名称。所有的文章都将保存在source文件夹下的_posts中。文章是以.md文件形式保存，在.md文件的顶部设置<code>categories</code>和<code>tags</code>字段可将文章分类、添加标签，不过这些都是可选的。</p>
-</li>
-<li><p><code>$ hexo new page &quot;pagename&quot;</code>，新建页面，pagename为页面的名称。新建页面将保存在source文件夹下。</p>
-</li>
-<li><p>组合命令：<br>   <code>$ hexo s -g</code>，生成静态页面并预览<br>   <code>$ hexo d -g</code>，生成静态页面并上传</p>
-</li>
-<li><p>如何让博文不全部显示（默认全部显示），而是显示博文的摘要呢？解决方法是在博文适当的位置加上<code>&lt;!--more--&gt;</code></p>
-</li>
-<li><p>创建的个人博客有两种配置文件，一种是根目录下的_config.yml，还有就是每个主题中的_config.yml。有关命令和配置详情请参见<a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">官方文档</a></p>
-</li>
-</ol>
+<h2 id="特殊字符元字符"><a href="#特殊字符元字符" class="headerlink" title="特殊字符元字符"></a>特殊字符元字符</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">元字符</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>\d</code></td>
+<td style="text-align:center">匹配任意数字字符，等价于<code>[0-9]</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\D</code></td>
+<td style="text-align:center"><code>\d</code>的反义</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\s</code></td>
+<td style="text-align:center">匹配一个空白字符，等价于<code>[\f\n\r\t\v]</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\S</code></td>
+<td style="text-align:center"><code>\s</code>的反义，等价于<code>[^\f\n\r\t\v]</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\w</code></td>
+<td style="text-align:center">匹配任意字母、数字字符或下划线字符，等价于<code>[0-9A-Za-z_]</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\W</code></td>
+<td style="text-align:center"><code>\w</code>的反义</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\f</code></td>
+<td style="text-align:center">换页符</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\n</code></td>
+<td style="text-align:center">换行符</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\r</code></td>
+<td style="text-align:center">回车符</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\t</code></td>
+<td style="text-align:center">制表符（Tab字符）</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\v</code></td>
+<td style="text-align:center">垂直制表符</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\x</code></td>
+<td style="text-align:center">匹配一个十六进制数字</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\0</code></td>
+<td style="text-align:center">匹配一个八进制数字</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>[\b]</code></td>
+<td style="text-align:center">退格字符</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\c</code></td>
+<td style="text-align:center">匹配一个控制字符，如\cZ将匹配Ctrl-Z</td>
+</tr>
+</tbody>
+</table>
+<p><em>空白元字符：</em> <code>[\b]</code>、<code>\f</code>、<code>\n</code>、<code>\r</code>、<code>\t</code>、<code>\v</code></p>
 <hr>
-<h2 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h2><p>可以参见我的个人博客 <a href="https://GetWang.github.io/" target="_blank" rel="external">https://GetWang.github.io/</a><br>我用的是<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">next主题</a></p>
+<h2 id="回溯引用和前后查找"><a href="#回溯引用和前后查找" class="headerlink" title="回溯引用和前后查找"></a>回溯引用和前后查找</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">元字符</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>()</code></td>
+<td style="text-align:center">定义一个子表达式，即捕获组</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\1</code></td>
+<td style="text-align:center">在正则表达式内部引用第一个捕获组；\2表示引用第二个，依次类推</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>?=</code></td>
+<td style="text-align:center">向前查找，也即先行断言</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>?!</code></td>
+<td style="text-align:center">负向前查找，也即先行否定断言</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>?&lt;=</code></td>
+<td style="text-align:center">向后查找，也即后行断言</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>?&lt;!</code></td>
+<td style="text-align:center">负向后查找，也即后行否定断言</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>?()</code></td>
+<td style="text-align:center">条件（if then）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>另：</strong> 元字符<code>?()|</code>表示：条件（if then else） </p>
 <hr>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li><a href="http://www.cnblogs.com/zhcncn/p/4097881.html" target="_blank" rel="external">http://www.cnblogs.com/zhcncn/p/4097881.html</a></li>
-<li><a href="http://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html" target="_blank" rel="external">http://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html</a></li>
-<li><a href="http://www.jianshu.com/p/05289a4bc8b2" target="_blank" rel="external">http://www.jianshu.com/p/05289a4bc8b2</a></li>
+<h2 id="检查IP地址"><a href="#检查IP地址" class="headerlink" title="检查IP地址"></a>检查IP地址</h2><p>使用正则表达式：<code>/(((\d{1,2})|(1\d{2})|(2[0-4]\d)|(25[0-5]))\.){3}((\d{1,2})|(1\d{2})|(2[0-4]\d)|(25[0-5]))/</code></p>
+<ul>
+<li><code>(\d{1,2})</code>匹配整数0~99</li>
+<li><code>(1\d{2})</code>匹配整数100~199</li>
+<li><code>(2[0-4]\d)</code>匹配整数200~249</li>
+<li><code>(25[0-5])</code>匹配整数250~255<br><strong>注：</strong> 该正则表达式只匹配符合规则的IP地址，不匹配非法的IP地址</li>
 </ul>
 
       
@@ -427,7 +592,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag"># hexo</a>
+            <a href="/tags/正则表达式/" rel="tag"># 正则表达式</a>
           
         </div>
       
@@ -440,8 +605,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/26/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2017/09/24/实现浏览器兼容版的inline-block显示/" rel="next" title="实现浏览器兼容版的inline-block显示">
+                <i class="fa fa-chevron-left"></i> 实现浏览器兼容版的inline-block显示
               </a>
             
           </div>
@@ -449,10 +614,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/24/标签使用注意事项/" rel="prev" title="标签使用注意事项">
-                标签使用注意事项 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -645,7 +806,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工作"><span class="nav-number">1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建仓库"><span class="nav-number">2.</span> <span class="nav-text">创建仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置SSH-Key"><span class="nav-number">3.</span> <span class="nav-text">配置SSH Key</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Why："><span class="nav-number">3.0.1.</span> <span class="nav-text">Why：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#How："><span class="nav-number">3.0.2.</span> <span class="nav-text">How：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用hexo写博客"><span class="nav-number">4.</span> <span class="nav-text">使用hexo写博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最终效果"><span class="nav-number">5.</span> <span class="nav-text">最终效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">6.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本的元字符"><span class="nav-number">1.</span> <span class="nav-text">基本的元字符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数量元字符"><span class="nav-number">2.</span> <span class="nav-text">数量元字符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#位置元字符"><span class="nav-number">3.</span> <span class="nav-text">位置元字符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特殊字符元字符"><span class="nav-number">4.</span> <span class="nav-text">特殊字符元字符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#回溯引用和前后查找"><span class="nav-number">5.</span> <span class="nav-text">回溯引用和前后查找</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#检查IP地址"><span class="nav-number">6.</span> <span class="nav-text">检查IP地址</span></a></li></ol></div>
             
 
           </div>
