@@ -121,7 +121,7 @@
     root: '/',
     scheme: 'Pisces',
     version: '5.1.2',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
@@ -285,7 +285,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/24/标签使用注意事项/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/07/找出数组中第 k 大的数字及其出现次数/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="GetWang">
@@ -304,7 +304,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/24/标签使用注意事项/" itemprop="url">标签使用注意事项</a></h1>
+                <a class="post-title-link" href="/2019/03/07/找出数组中第 k 大的数字及其出现次数/" itemprop="url">找出数组中第 k 大的数字及其出现次数</a></h1>
         
 
         <div class="post-meta">
@@ -316,8 +316,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-24T11:14:33+08:00">
-                2017-09-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-07T14:11:54+08:00">
+                2019-03-07
               </time>
             
 
@@ -339,8 +339,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/HTML/" itemprop="url" rel="index">
-                    <span itemprop="name">HTML</span>
+                  <a href="/categories/数据结构与算法/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构与算法</span>
                   </a>
                 </span>
 
@@ -377,163 +377,20 @@
 
       
         
-          
-            <ul>
-<li>有几个特殊的块级元素智能包含内联元素，不能包含块级元素，分别是h1-h6、p、dt</li>
-<li>块级元素可以包含内联元素或某些块级元素，但内联元素绝对不能包含块级元素</li>
-<li>&lt;img&gt;元素有margin值，故初始化时，会将其display为block</li>
+          <p>这是前端面试过程中遇到的一道算法题，虽说难度不大，但是也有些细节的地方需要仔细考虑。</p>
+<p>比如说数组 [1, 2, 4, 4, 3, 5]，第 2 大的数字是 4，出现了 2 次。下面以这个为例展开算法的讲解。</p>
+<p>先说说大体的思路，然后再考虑一些细节性的问题。</p>
+<ul>
+<li><p>既然涉及到数字大小的问题，那就要对给定数组进行排序，题目要求“第 k 大”的数字，故选择降序的方式更有利于后面的查找；</p>
+</li>
+<li><p>重点来了，需要遍历数组，对当前遍历到的数组元素的大小排名和 k 值进行比较，若排名大于 k 值则结束循环；如果排名等于 k 值，则将该数组元素记为第 k 大的数字，且次数加一；</p>
+</li>
+<li><p>那如何确定遍历的当前数组元素的大小排名呢？我们先将数组的第一项定为第 1 大的数字，然后比较第一项和第二项是否相等，若相等则第二项也为第 1 大；如果不相等则数组第二项为第 2 大的数字。依次类推，可获知每次遍历的数组元素的大小排名。</p>
+</li>
 </ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/03/使用github-hexo搭建免费个人博客/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="GetWang">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="GetWang's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/03/使用github-hexo搭建免费个人博客/" itemprop="url">使用github+hexo搭建免费个人博客</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-03T17:32:18+08:00">
-                2017-09-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><strong>注：</strong>本文搭建的是静态博客，且托管于github</p>
-<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
-<li>拥有一个github账号，没有就<a href="https://github.com/" target="_blank" rel="noopener">注册</a>一个</li>
-<li>安装<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a>、<a href="https://www.npmjs.com/enterprise" target="_blank" rel="noopener">npm</a>，npm的用处看<a href="https://zhuanlan.zhihu.com/p/24357770" target="_blank" rel="noopener">这里</a>，其实npm已经内置在了Node.js中，只需安装Node.js即可</li>
-<li>安装<a href="https://git-scm.com/" target="_blank" rel="noopener">git</a>客户端</li>
-</ul>
-<p><strong>ps：</strong>查看Node.js、npm、git版本。打开Git Bash，<code>$ node -v</code>，<code>$ npm -v</code>，<code>$ git --version</code>这三条命令可查看相应的版本</p>
-<hr>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/09/03/使用github-hexo搭建免费个人博客/#more" rel="contents">
+            <a class="btn" href="/2019/03/07/找出数组中第 k 大的数字及其出现次数/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -584,7 +441,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/26/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/06/使用 JS 获取文件扩展名/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="GetWang">
@@ -603,7 +460,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/08/26/hello-world/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/2019/03/06/使用 JS 获取文件扩展名/" itemprop="url">使用 JS 获取文件扩展名</a></h1>
         
 
         <div class="post-meta">
@@ -615,8 +472,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-26T19:40:28+08:00">
-                2017-08-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T20:32:12+08:00">
+                2019-03-06
               </time>
             
 
@@ -625,6 +482,28 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript-实用技巧/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript 实用技巧</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -654,12 +533,467 @@
 
       
         
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+          <p>给你一个文件名，你能获得它的扩展名吗？这里面主要考察的是对正则表达式的熟悉程度。</p>
+<p>我们先对文件名做个分析，扩展名是在文件名的<strong>最后</strong>，且以 <code>.</code> 开头。</p>
+<p>如此扩展名便有了两个特点，针对第一个特点，我们用 <code>$</code> 元字符限定扩展名在整个文件名的最后；</p>
+<p>对于第二个特点，以 <code>\.</code> 表示扩展名的开头，而用 <code>[^\.]+</code> 匹配扩展名的名字部分。其中因为 <code>.</code> 是元字符，故予以转义；<code>^</code> 元字符放置于 <code>.</code> 字符之前表示匹配除 <code>.</code> 字符以外的任意字符。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/08/26/hello-world/#more" rel="contents">
+            <a class="btn" href="/2019/03/06/使用 JS 获取文件扩展名/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/05/实现数组的随机排序（含洗牌算法）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="GetWang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GetWang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/05/实现数组的随机排序（含洗牌算法）/" itemprop="url">实现数组的随机排序（含洗牌算法）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-05T20:49:36+08:00">
+                2019-03-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构与算法/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构与算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>有时，我们需要将一个数组内的元素顺序进行打乱，达到随机排序的目的。首先想到的是 <code>Math.random()</code> 方法结合数组的 <code>sort()</code> 方法。</p>
+<h3 id="Math-random-结合-sort-方法"><a href="#Math-random-结合-sort-方法" class="headerlink" title="Math.random() 结合 sort() 方法"></a>Math.random() 结合 sort() 方法</h3><p><code>Math.random()</code> 方法用于产生一个介于 0 和 1 之间的随机数（含 0 但不包括 1）。</p>
+<p>数组的 <code>sort()</code> 方法可以有两种用法：</p>
+<p>用法一：在不传入可选的函数参数时，将会对数组的每一个元素应用 <code>toString()</code> 方法，通过比较字符串大小的方式<strong>升序</strong>排列所有的数组项。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/03/05/实现数组的随机排序（含洗牌算法）/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/27/怎么实现深拷贝/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="GetWang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GetWang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/27/怎么实现深拷贝/" itemprop="url">怎么实现深拷贝</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-27T20:58:49+08:00">
+                2018-10-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript-实用技巧/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript 实用技巧</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <ol>
+<li><p>注意点</p>
+<ul>
+<li>进行拷贝操作时，须加以区分引用类型和基本数据类型的值，且拷贝引用类型的值时，不是简简单单的复制其保存在栈中的指针，（即浅拷贝）而是应该复制其存储在堆中的数据。</li>
+</ul>
+</li>
+<li><p>解题思路<br>（1）方法一：分别对数组、对象、基本数据类型值进行判断、考虑，使用递归的方式复制值<br>（2）方法二：利用了 <code>JSON.parse()</code>、<code>JSON.stringify()</code> 这两个方法实现深拷贝</p>
+</li>
+</ol>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/10/27/怎么实现深拷贝/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/23/如何实现数组去重？/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="GetWang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GetWang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/23/如何实现数组去重？/" itemprop="url">如何实现数组去重？</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-23T21:41:40+08:00">
+                2018-10-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构与算法/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构与算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>要将数组中重复的值剔除，常规解法使用 ES5 中数组的一些 API 即可，而更简便的方法可以结合使用 ES6 中的扩展运算符和 Set 数据结构。</p>
+<p>下面给出 4 种解法：</p>
+<ol>
+<li>方法一，使用 splice 方法删除重复的元素<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">normalize</span> (<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (arr &amp;&amp; <span class="built_in">Array</span>.isArray(arr)) &#123;</span><br><span class="line">    <span class="keyword">var</span> len = arr.length,</span><br><span class="line">        map = &#123;&#125;;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = len - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">      <span class="keyword">if</span> (arr[i] <span class="keyword">in</span> map) &#123;</span><br><span class="line">        arr.splice(i, <span class="number">1</span>);</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        map[arr[i]] = <span class="literal">true</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/10/23/如何实现数组去重？/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -701,7 +1035,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -748,7 +1082,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -759,7 +1093,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -770,7 +1104,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -844,13 +1178,6 @@
       
 
       
-        <div class="back-to-top">
-          <i class="fa fa-arrow-up"></i>
-          
-            <span id="scrollpercent"><span>0</span>%</span>
-          
-        </div>
-      
 
     </div>
   </aside>
@@ -894,6 +1221,13 @@
       </div>
     </footer>
 
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
     
 
   </div>

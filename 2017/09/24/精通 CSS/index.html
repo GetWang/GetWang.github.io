@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="CSS,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2">
+
+
+
+
+
+
+<meta name="description" content="选择器 链接伪类：:link 和 :visited，只能应用于锚元素 动态伪类： :hover、:active 和 :focus，理论上可以应用于任何元素 IE6 只注意应用于锚链接的 :active 和 :hover；完全忽略 :focus IE7 在任何元素上都支持 :hover，但是忽略 :active 和 :focus 通配符选择器 \* 的优先级最低">
+<meta name="keywords" content="CSS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="精通 CSS">
+<meta property="og:url" content="http://yoursite.com/2017/09/24/精通 CSS/index.html">
+<meta property="og:site_name" content="GetWang&#39;s Blog">
+<meta property="og:description" content="选择器 链接伪类：:link 和 :visited，只能应用于锚元素 动态伪类： :hover、:active 和 :focus，理论上可以应用于任何元素 IE6 只注意应用于锚链接的 :active 和 :hover；完全忽略 :focus IE7 在任何元素上都支持 :hover，但是忽略 :active 和 :focus 通配符选择器 \* 的优先级最低">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-04-17T14:11:39.220Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="精通 CSS">
+<meta name="twitter:description" content="选择器 链接伪类：:link 和 :visited，只能应用于锚元素 动态伪类： :hover、:active 和 :focus，理论上可以应用于任何元素 IE6 只注意应用于锚链接的 :active 和 :hover；完全忽略 :focus IE7 在任何元素上都支持 :hover，但是忽略 :active 和 :focus 通配符选择器 \* 的优先级最低">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/09/24/精通 CSS/">
+
+
+
+
+
+  <title>精通 CSS | GetWang's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">GetWang's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/24/精通 CSS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="GetWang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GetWang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">精通 CSS</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-24T11:31:49+08:00">
+                2017-09-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS-总结/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS 总结</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h3><ul>
+<li>链接伪类：<code>:link</code> 和 <code>:visited</code>，只能应用于锚元素</li>
+<li>动态伪类： <code>:hover</code>、<code>:active</code> 和 <code>:focus</code>，理论上可以应用于任何元素</li>
+<li>IE6 只注意应用于锚链接的 <code>:active</code> 和 <code>:hover</code>；完全忽略 <code>:focus</code></li>
+<li>IE7 在任何元素上都支持 <code>:hover</code>，但是忽略 <code>:active</code> 和 <code>:focus</code></li>
+<li>通配符选择器 <code>\*</code> 的优先级最低</li>
+</ul>
+<hr>
+<a id="more"></a>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>为了让注释更有意义，可用关键字来区分重要的注释，用编程术语来说，这些关键字称为 gotcha，它们在以后的开发阶段非常有帮助。参考 <a href="http://cssdoc.net" target="_blank" rel="noopener">CSSDoc 项目</a></p>
+<hr>
+<h3 id="外边距叠加"><a href="#外边距叠加" class="headerlink" title="外边距叠加"></a>外边距叠加</h3><p>当两个或更多垂直外边距相遇时，它们将形成一个外边距，这个外边距的高度等于发生叠加的外边距的高度的最大者。外边距可以与本身发生叠加。</p>
+<hr>
+<h3 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h3><ul>
+<li>要清除某父容器内的浮动元素，可以让父元素也浮动起来，从而达到清除浮动的效果</li>
+<li>应用值为 hidden 或 auto 的 overflow 属性有一个有用的副作用，这会自动清除父元素内包含的任何浮动元素</li>
+</ul>
+<hr>
+<h3 id="在导航条中突出显示当前页面"><a href="#在导航条中突出显示当前页面" class="headerlink" title="在导航条中突出显示当前页面"></a>在导航条中突出显示当前页面</h3><p><strong>不需要</strong>动态地在菜单（导航）中添加类的解决方案：在每个页面的主体元素中添加一个 ID 或类名，从而指出用户当前在哪个页面或部分中；然后，在导航列表中的每个项中添加一个相应的 ID 或类名；就可以使用主体（body）的 ID/类和列表 ID/类的唯一组合在站点导航中突出显示当前页面。eg： </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#home</span> <span class="selector-class">.nav</span> <span class="selector-class">.home</span> <span class="selector-tag">a</span>, </span><br><span class="line"><span class="selector-id">#about</span> <span class="selector-class">.nav</span> <span class="selector-class">.about</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">  ......</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p>在一个表格中只能使用一个 thead 和 tfoot，但可使用多个 tbody；且如果选择使用 thead 或 tfoot，那么至少必须使用一个 tbody 元素</p>
+<hr>
+<h3 id="标签-lt-label-gt"><a href="#标签-lt-label-gt" class="headerlink" title="标签 &lt;label&gt;"></a>标签 <code>&lt;label&gt;</code></h3><p>有时我们不希望为每个表单控件元素都显示标签，这时我们可以让标签出现的源码中但不显示在页面中。使用文本缩进，标签宽度置为 0</p>
+<hr>
+<h3 id="修复-bug"><a href="#修复-bug" class="headerlink" title="修复 bug"></a>修复 bug</h3><ul>
+<li>有时，仅仅添加边框就能修复问题（往往说明存在外边距叠加问题）</li>
+<li>尝试将 bug 的效果扩大化</li>
+<li>将 position 设为 relative</li>
+<li>将 display 设置为 inline（在浮动元素上）</li>
+<li>设置宽度等尺寸</li>
+</ul>
+<hr>
+<h3 id="IE-条件注释"><a href="#IE-条件注释" class="headerlink" title="IE 条件注释"></a>IE 条件注释</h3><p>是一种专有的（非标准的）对常规 HTML 注释的 Microsoft 扩展。它能够根据条件（比如浏览器版本）显示代码块。它通常被看做处理IE特有bug的最好方法，放在 HTML 头部。eg：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--[if IE 7]&gt;</span></span><br><span class="line"><span class="comment">  &lt;link rel="stylesheet" href="/css/ie7.css" /&gt;</span></span><br><span class="line"><span class="comment">&lt;![endif]--&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--[if lt IE 7]&gt;</span></span><br><span class="line"><span class="comment">  &lt;link rel="stylesheet" href="......" /&gt;</span></span><br><span class="line"><span class="comment">&lt;![endif]--&gt;</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="字体格式"><a href="#字体格式" class="headerlink" title="字体格式"></a>字体格式</h3><ul>
+<li>IE 只支持 .eot(Embedded OpenType) 字体格式</li>
+<li>.ttf(TrueType) 转为 .eot</li>
+<li>.otf(OpenType) 等其它字体格式转为 .ttf，再转为 .eot</li>
+</ul>
+<hr>
+<h3 id="Web-内容友好"><a href="#Web-内容友好" class="headerlink" title="Web 内容友好"></a>Web 内容友好</h3><ul>
+<li><a href="www.w3.org/TR/WAI-WEBCONTENT/">Web Content Accessibility Guidelines</a></li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CSS/" rel="tag"># CSS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/24/标签使用注意事项/" rel="next" title="标签使用注意事项">
+                <i class="fa fa-chevron-left"></i> 标签使用注意事项
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/09/24/设置 overflow 属性为 hidden/" rel="prev" title="设置 overflow 属性为 hidden">
+                设置 overflow 属性为 hidden <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          
+            <img class="site-author-image" itemprop="image" src="/uploads/avatar.png" alt="GetWang">
+          
+            <p class="site-author-name" itemprop="name">GetWang</p>
+            <p class="site-description motion-element" itemprop="description">记录、分享我的学习经验、总结</p>
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/GetWang" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:wang_dresimap@qq.com" target="_blank" title="E-Mail">
+                  
+                    <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://juejin.im/user/58f4783fa0bb9f006aa5290c" target="_blank" title="掘金">
+                  
+                    <i class="fa fa-fw fa-globe"></i>掘金</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.ruanyifeng.com/blog/" title="阮一峰" target="_blank">阮一峰</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.zhangxinxu.com/" title="张鑫旭" target="_blank">张鑫旭</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://taobaofed.org/" title="Taobao FED" target="_blank">Taobao FED</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://75team.com/" title="奇舞团" target="_blank">奇舞团</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#选择器"><span class="nav-number">1.</span> <span class="nav-text">选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注释"><span class="nav-number">2.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#外边距叠加"><span class="nav-number">3.</span> <span class="nav-text">外边距叠加</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浮动"><span class="nav-number">4.</span> <span class="nav-text">浮动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在导航条中突出显示当前页面"><span class="nav-number">5.</span> <span class="nav-text">在导航条中突出显示当前页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表格"><span class="nav-number">6.</span> <span class="nav-text">表格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标签-lt-label-gt"><span class="nav-number">7.</span> <span class="nav-text">标签 &lt;label&gt;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修复-bug"><span class="nav-number">8.</span> <span class="nav-text">修复 bug</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE-条件注释"><span class="nav-number">9.</span> <span class="nav-text">IE 条件注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字体格式"><span class="nav-number">10.</span> <span class="nav-text">字体格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Web-内容友好"><span class="nav-number">11.</span> <span class="nav-text">Web 内容友好</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">GetWang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.2</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

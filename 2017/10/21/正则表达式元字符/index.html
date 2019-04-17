@@ -102,18 +102,18 @@
 
 
 
-<meta name="description" content="基本的元字符   元字符 说明     . 匹配任意单个字符（换行符除外）   [] 匹配字符集中的一个字符   [^] 对字符集合求非   - 定义一个区间（例如[0-9]）   \ 对一个字符转义    另： 元字符|表示逻辑或操作">
+<meta name="description" content="基本的元字符   元字符 说明     . 匹配任意单个字符（换行符除外）   [] 匹配字符集中的一个字符   [^] 对字符集合求非   - 定义一个区间（例如 [0-9]）   \ 对一个字符转义    另： 元字符 | 表示逻辑或操作">
 <meta name="keywords" content="正则表达式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="正则表达式元字符">
 <meta property="og:url" content="http://yoursite.com/2017/10/21/正则表达式元字符/index.html">
 <meta property="og:site_name" content="GetWang&#39;s Blog">
-<meta property="og:description" content="基本的元字符   元字符 说明     . 匹配任意单个字符（换行符除外）   [] 匹配字符集中的一个字符   [^] 对字符集合求非   - 定义一个区间（例如[0-9]）   \ 对一个字符转义    另： 元字符|表示逻辑或操作">
+<meta property="og:description" content="基本的元字符   元字符 说明     . 匹配任意单个字符（换行符除外）   [] 匹配字符集中的一个字符   [^] 对字符集合求非   - 定义一个区间（例如 [0-9]）   \ 对一个字符转义    另： 元字符 | 表示逻辑或操作">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-21T13:25:17.615Z">
+<meta property="og:updated_time" content="2019-04-17T14:03:21.561Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="正则表达式元字符">
-<meta name="twitter:description" content="基本的元字符   元字符 说明     . 匹配任意单个字符（换行符除外）   [] 匹配字符集中的一个字符   [^] 对字符集合求非   - 定义一个区间（例如[0-9]）   \ 对一个字符转义    另： 元字符|表示逻辑或操作">
+<meta name="twitter:description" content="基本的元字符   元字符 说明     . 匹配任意单个字符（换行符除外）   [] 匹配字符集中的一个字符   [^] 对字符集合求非   - 定义一个区间（例如 [0-9]）   \ 对一个字符转义    另： 元字符 | 表示逻辑或操作">
 
 
 
@@ -123,7 +123,7 @@
     root: '/',
     scheme: 'Pisces',
     version: '5.1.2',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
@@ -397,7 +397,7 @@
 </tr>
 <tr>
 <td style="text-align:center"><code>-</code></td>
-<td style="text-align:center">定义一个区间（例如[0-9]）</td>
+<td style="text-align:center">定义一个区间（例如 [0-9]）</td>
 </tr>
 <tr>
 <td style="text-align:center"><code>\</code></td>
@@ -405,7 +405,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>另：</strong> 元字符<code>|</code>表示逻辑或操作</p>
+<p><strong>另：</strong> 元字符 <code>|</code> 表示逻辑或操作</p>
 <hr>
 <a id="more"></a>
 <h2 id="数量元字符"><a href="#数量元字符" class="headerlink" title="数量元字符"></a>数量元字符</h2><table>
@@ -418,39 +418,39 @@
 <tbody>
 <tr>
 <td style="text-align:center"><code>*</code></td>
-<td style="text-align:center">匹配前一个字符（捕获组）的零次或多次重复，等价于<code>{0,}</code></td>
+<td style="text-align:center">匹配前一个字符（捕获组）的零次或多次重复，等价于 <code>{0,}</code></td>
 </tr>
 <tr>
 <td style="text-align:center"><code>*?</code></td>
-<td style="text-align:center"><code>*</code>的懒惰型版本</td>
+<td style="text-align:center"><code>*</code> 的懒惰型版本</td>
 </tr>
 <tr>
 <td style="text-align:center"><code>+</code></td>
-<td style="text-align:center">匹配前一个字符（捕获组）的一次或多次重复，等价于<code>{1,}</code></td>
+<td style="text-align:center">匹配前一个字符（捕获组）的一次或多次重复，等价于 <code>{1,}</code></td>
 </tr>
 <tr>
 <td style="text-align:center"><code>+?</code></td>
-<td style="text-align:center"><code>+</code>的懒惰型版本</td>
+<td style="text-align:center"><code>+</code> 的懒惰型版本</td>
 </tr>
 <tr>
 <td style="text-align:center"><code>?</code></td>
-<td style="text-align:center">匹配前一个字符（捕获组）的零次或一次重复，等价于<code>{0,1}</code></td>
+<td style="text-align:center">匹配前一个字符（捕获组）的零次或一次重复，等价于 <code>{0,1}</code></td>
 </tr>
 <tr>
 <td style="text-align:center"><code>{n}</code></td>
-<td style="text-align:center">匹配前一个字符（捕获组）的n次重复</td>
+<td style="text-align:center">匹配前一个字符（捕获组）的 n 次重复</td>
 </tr>
 <tr>
 <td style="text-align:center"><code>{m,n}</code></td>
-<td style="text-align:center">匹配前一个字符（捕获组）至少m次且至多n次重复</td>
+<td style="text-align:center">匹配前一个字符（捕获组）至少 m 次且至多 n 次重复</td>
 </tr>
 <tr>
 <td style="text-align:center"><code>{n,}</code></td>
-<td style="text-align:center">匹配前一个字符（捕获组）的n次或多次重复</td>
+<td style="text-align:center">匹配前一个字符（捕获组）的 n 次或多次重复</td>
 </tr>
 <tr>
 <td style="text-align:center"><code>{n,}?</code></td>
-<td style="text-align:center"><code>{n,}</code>的懒惰型版本</td>
+<td style="text-align:center"><code>{n,}</code> 的懒惰型版本</td>
 </tr>
 </tbody>
 </table>
@@ -477,7 +477,7 @@
 </tr>
 <tr>
 <td style="text-align:center"><code>\B</code></td>
-<td style="text-align:center">\b的反义</td>
+<td style="text-align:center">\b 的反义</td>
 </tr>
 </tbody>
 </table>
@@ -492,27 +492,27 @@
 <tbody>
 <tr>
 <td style="text-align:center"><code>\d</code></td>
-<td style="text-align:center">匹配任意数字字符，等价于<code>[0-9]</code></td>
+<td style="text-align:center">匹配任意数字字符，等价于 <code>[0-9]</code></td>
 </tr>
 <tr>
 <td style="text-align:center"><code>\D</code></td>
-<td style="text-align:center"><code>\d</code>的反义</td>
+<td style="text-align:center"><code>\d</code> 的反义</td>
 </tr>
 <tr>
 <td style="text-align:center"><code>\s</code></td>
-<td style="text-align:center">匹配一个空白字符，等价于<code>[\f\n\r\t\v]</code></td>
+<td style="text-align:center">匹配一个空白字符，等价于 <code>[\f\n\r\t\v]</code></td>
 </tr>
 <tr>
 <td style="text-align:center"><code>\S</code></td>
-<td style="text-align:center"><code>\s</code>的反义，等价于<code>[^\f\n\r\t\v]</code></td>
+<td style="text-align:center"><code>\s</code> 的反义，等价于 <code>[^\f\n\r\t\v]</code></td>
 </tr>
 <tr>
 <td style="text-align:center"><code>\w</code></td>
-<td style="text-align:center">匹配任意字母、数字字符或下划线字符，等价于<code>[0-9A-Za-z_]</code></td>
+<td style="text-align:center">匹配任意字母、数字字符或下划线字符，等价于 <code>[0-9A-Za-z_]</code></td>
 </tr>
 <tr>
 <td style="text-align:center"><code>\W</code></td>
-<td style="text-align:center"><code>\w</code>的反义</td>
+<td style="text-align:center"><code>\w</code> 的反义</td>
 </tr>
 <tr>
 <td style="text-align:center"><code>\f</code></td>
@@ -528,7 +528,7 @@
 </tr>
 <tr>
 <td style="text-align:center"><code>\t</code></td>
-<td style="text-align:center">制表符（Tab字符）</td>
+<td style="text-align:center">制表符（Tab 字符）</td>
 </tr>
 <tr>
 <td style="text-align:center"><code>\v</code></td>
@@ -548,7 +548,7 @@
 </tr>
 <tr>
 <td style="text-align:center"><code>\c</code></td>
-<td style="text-align:center">匹配一个控制字符，如\cZ将匹配Ctrl-Z</td>
+<td style="text-align:center">匹配一个控制字符，如 \cZ 将匹配 Ctrl-Z</td>
 </tr>
 </tbody>
 </table>
@@ -568,7 +568,7 @@
 </tr>
 <tr>
 <td style="text-align:center"><code>\1</code></td>
-<td style="text-align:center">在正则表达式内部引用第一个捕获组；\2表示引用第二个，依次类推</td>
+<td style="text-align:center">在正则表达式内部引用第一个捕获组；\2 表示引用第二个，依次类推</td>
 </tr>
 <tr>
 <td style="text-align:center"><code>?=</code></td>
@@ -592,15 +592,16 @@
 </tr>
 </tbody>
 </table>
-<p><strong>另：</strong> 元字符<code>?()|</code>表示：条件（if then else） </p>
+<p><strong>另：</strong> 元字符 <code>?()|</code> 表示：条件（if then else） </p>
 <hr>
 <h2 id="检查IP地址"><a href="#检查IP地址" class="headerlink" title="检查IP地址"></a>检查IP地址</h2><p>使用正则表达式：<code>/(((\d{1,2})|(1\d{2})|(2[0-4]\d)|(25[0-5]))\.){3}((\d{1,2})|(1\d{2})|(2[0-4]\d)|(25[0-5]))/</code></p>
 <ul>
-<li><code>(\d{1,2})</code>匹配整数0~99</li>
-<li><code>(1\d{2})</code>匹配整数100~199</li>
-<li><code>(2[0-4]\d)</code>匹配整数200~249</li>
-<li><code>(25[0-5])</code>匹配整数250~255<br><strong>注：</strong> 该正则表达式只匹配符合规则的IP地址，不匹配非法的IP地址</li>
+<li><code>(\d{1,2})</code> 匹配整数 0 ~ 99</li>
+<li><code>(1\d{2})</code> 匹配整数 100 ~ 199</li>
+<li><code>(2[0-4]\d)</code> 匹配整数 200 ~ 249</li>
+<li><code>(25[0-5])</code> 匹配整数 250 ~ 255</li>
 </ul>
+<p><strong>注：</strong> 该正则表达式只匹配符合规则的 IP 地址，不匹配非法的 IP 地址</p>
 
       
     </div>
@@ -631,8 +632,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/24/实现浏览器兼容版的inline-block显示/" rel="next" title="实现浏览器兼容版的inline-block显示">
-                <i class="fa fa-chevron-left"></i> 实现浏览器兼容版的inline-block显示
+              <a href="/2017/09/24/实现浏览器兼容版的 inline-block 显示/" rel="next" title="实现浏览器兼容版的 inline-block 显示">
+                <i class="fa fa-chevron-left"></i> 实现浏览器兼容版的 inline-block 显示
               </a>
             
           </div>
@@ -640,6 +641,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/23/如何实现数组去重？/" rel="prev" title="如何实现数组去重？">
+                如何实现数组去重？ <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -717,7 +722,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -728,7 +733,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -739,7 +744,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -829,13 +834,6 @@
       
 
       
-        <div class="back-to-top">
-          <i class="fa fa-arrow-up"></i>
-          
-            <span id="scrollpercent"><span>0</span>%</span>
-          
-        </div>
-      
 
     </div>
   </aside>
@@ -879,6 +877,13 @@
       </div>
     </footer>
 
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
     
 
   </div>
